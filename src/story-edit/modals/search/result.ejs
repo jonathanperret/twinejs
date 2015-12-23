@@ -1,0 +1,20 @@
+<div class="result collapseContainer">
+	<p class="name">
+		<button class="link subtle collapseToggle">
+			<i class="fa fa-plus-square-o collapseReverse"></i>
+			<i class="fa fa-minus-square-o collapseInline"></i>
+			<%= name %>
+			(<%=
+			/* L10n: %d is a number of text matches after a search. */
+			sp('%d match', '%d matches', numMatches)
+			%>)
+		</button> 
+
+		<button class="danger link replacePassage" title="<%= s('Replace in this passage') %>"><i class="fa fa-bolt fa-fw"></i>
+		<%= s('Replace in Passage') %></button>
+	</p>
+
+	<blockquote class="collapse">
+		<pre><%- preview %></pre>
+	</blockquote>
+</div>
