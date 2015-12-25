@@ -1,0 +1,8 @@
+<button data-format="<%= name %>" class="format <% if (active) { %>active<% } %>">
+	<img src="<%= path %>/<%= image %>" class="icon">
+	<div class="description">
+		<strong><%= name %> <%= version %></strong><br>
+		by <%= author %><br>
+		<%- description %>
+	</div>
+</button>
