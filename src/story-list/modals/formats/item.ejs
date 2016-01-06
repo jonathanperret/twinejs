@@ -1,0 +1,19 @@
+<tr data-format="<%= name %>">
+	<td>
+		<input type="radio" name="<% if (proofing) { %>proofingFormat<% } else { %>storyFormat<% } %>" class="chooseFormat" id="format-<%= name %>">
+	</td>
+	<td class="format">
+		<img src="<%= path %>/<%= image %>" class="icon">
+		<div class="description">
+			<strong><%= name %> <%= version %></strong><br>
+			by <%- author %><br>
+			<%- description %>
+		</div>
+	</td>
+	<td>
+		<% if (userAdded) { %>
+			<button class="danger removeFormat"><i class="fa fa-trash"></i> <%= s('Remove') %></button>
+		<% } %>
+	</td>
+</tr>
+
